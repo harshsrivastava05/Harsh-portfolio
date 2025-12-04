@@ -62,25 +62,35 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
   const [hovered, setHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLAnchorElement>(null);
   
   const images = projectImages[project.id] || ["/assets/images/myself.jpeg"];
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Carousel effect
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    if (hovered && images.length > 1) {
+    if (hovered && !isMobile && images.length > 1) {
       interval = setInterval(() => {
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
-      }, 800); // Change image every 800ms
+      }, 800); 
     } else {
       setCurrentImageIndex(0);
     }
     return () => clearInterval(interval);
-  }, [hovered, images.length]);
+  }, [hovered, isMobile, images.length]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    // We want global coordinates for the fixed position image, or relative to viewport
+    if (isMobile) return;
     setMousePos({ x: e.clientX, y: e.clientY });
   };
 
@@ -91,10 +101,11 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
         ref={ref}
         className="group relative p-8 md:p-12 transition-colors duration-500 block border-b border-white last:border-b-0 z-10"
         style={{
-          backgroundColor: hovered ? "#ffffff" : "#000000",
-          color: hovered ? "#000000" : "#ffffff"
+          backgroundColor: (hovered && !isMobile) ? "#ffffff" : "#000000",
+          color: (hovered && !isMobile) ? "#000000" : "#ffffff"
         }}
         onMouseEnter={(e) => {
+          if (isMobile) return;
           setMousePos({ x: e.clientX, y: e.clientY });
           setHovered(true);
         }}
@@ -103,10 +114,14 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
       >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
           <div className="flex items-baseline gap-8 w-full md:w-auto">
-            <span className="font-mono text-xl text-gray-500 group-hover:text-black transition-colors">
+            <span className={`font-mono text-xl transition-colors ${
+              (hovered && !isMobile) ? "text-black" : "text-gray-500"
+            }`}>
               {String(index + 1).padStart(2, '0')}
             </span>
-            <h3 className="text-4xl md:text-6xl font-heading font-bold tracking-tighter uppercase group-hover:translate-x-4 transition-transform duration-500">
+            <h3 className={`text-4xl md:text-6xl font-heading font-bold tracking-tighter uppercase transition-transform duration-500 ${
+              (hovered && !isMobile) ? "translate-x-4" : ""
+            }`}>
               {project.name}
             </h3>
           </div>
@@ -119,8 +134,12 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
                 </span>
               ))}
             </div>
-            <div className="w-12 h-12 flex items-center justify-center border border-current rounded-full group-hover:bg-black group-hover:text-white transition-all duration-500">
-              <span className="text-2xl font-heading -rotate-45 group-hover:rotate-0 transition-transform duration-500">
+            <div className={`w-12 h-12 flex items-center justify-center border border-current rounded-full transition-all duration-500 ${
+              (hovered && !isMobile) ? "bg-black text-white" : ""
+            }`}>
+              <span className={`text-2xl font-heading transition-transform duration-500 ${
+                (hovered && !isMobile) ? "rotate-0" : "-rotate-45"
+              }`}>
                 →
               </span>
             </div>
@@ -128,9 +147,9 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
         </div>
       </Link>
 
-      {/* Portal-like Hover Image (Fixed position to break out of overflow) */}
+      {/* Portal-like Hover Image (Desktop Only) */}
       <AnimatePresence>
-        {hovered && (
+        {hovered && !isMobile && (
           <motion.div
             initial={{ 
               opacity: 0, 
@@ -147,7 +166,7 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
             className="fixed z-[100] pointer-events-none w-[400px] h-[225px] bg-black border-2 border-white overflow-hidden shadow-[10px_10px_0px_0px_rgba(255,255,255,0.2)]"
-            style={{ left: 0, top: 0 }} // Reset position to use x/y transforms from 0,0
+            style={{ left: 0, top: 0 }} 
           >
             {/* Image Carousel */}
             <AnimatePresence mode="wait">
