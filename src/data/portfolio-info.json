@@ -1,0 +1,274 @@
+{
+  "personalInfo": {
+    "name": "Harsh Srivastava",
+    "age": 22,
+    "email": "harshsrivastava8704@gmail.com",
+    "location": {
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "country": "India"
+    }
+  },
+  "education": {
+    "currentStatus": "Fourth-year CSE Undergraduate",
+    "college": {
+      "name": "Pranveer Singh Institute of Technology (PSIT)",
+      "location": "Kanpur",
+      "degree": "Bachelor of Technology",
+      "field": "Computer Science and Engineering",
+      "studentId": "2201641530201"
+    }
+  },
+  "about": {
+    "summary": "Full-Stack and AI Engineer focused on scalable backend systems, real-time architectures, and production-ready agentic AI workflows.",
+    "keyTraits": [
+      "Systems thinker",
+      "Fast learner",
+      "Strong ownership mindset",
+      "Team-oriented problem solver"
+    ],
+    "interests": [
+      "Backend Architecture",
+      "Agentic AI Workflows",
+      "Retrieval-Augmented Generation (RAG)",
+      "Full-stack Engineering",
+      "System Design"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Curiobot",
+      "description": "An AI-powered study assistant that converts static PDFs into structured, interactive learning sessions using multi-agent workflows, high-performance backend systems, and visual mind mapping.",
+      "type": "AI Application",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/Curiobot",
+      "technologies": [
+        "Next.js",
+        "FastAPI",
+        "Python asyncio",
+        "LangGraph",
+        "Redis",
+        "Pinecone",
+        "Docker",
+        "React Flow",
+        "TypeScript"
+      ],
+      "keyFeatures": [
+        "Multi-agent LangGraph workflow",
+        "PDF-to-knowledge transformation",
+        "RAG-powered question answering",
+        "Sub-100ms retrieval using Redis",
+        "Async parallel pipelines",
+        "Vector search with Pinecone",
+        "Mind-map visualization",
+        "Containerized microservices"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Document Analyzer",
+      "description": "An AI-powered document analysis platform that converts uploaded files into conversational insights using retrieval, LLMs, and Next.js UI.",
+      "type": "AI Application",
+      "live": "https://document-analyzer-ten.vercel.app/",
+      "github": "https://github.com/harshsrivastava05/Document-Analyzer",
+      "technologies": [
+        "Next.js",
+        "FastAPI",
+        "Pinecone",
+        "Google Cloud Storage",
+        "NextAuth",
+        "TypeScript"
+      ],
+      "keyFeatures": [
+        "RAG-based document analysis",
+        "Conversational answer generation",
+        "Secure OAuth + JWT authentication",
+        "Persistent chat history",
+        "Cloud storage integration",
+        "High-accuracy vector retrieval"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ashmark – Premium T-Shirt E-Commerce Platform",
+      "description": "A production-grade eCommerce platform with complete product flows, admin dashboards, and secure payments.",
+      "type": "E-commerce",
+      "live": "https://ashmark.vercel.app/",
+      "github": "https://github.com/harshsrivastava05/ashmark",
+      "technologies": [
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma ORM",
+        "MySQL",
+        "Razorpay",
+        "NextAuth.js"
+      ],
+      "keyFeatures": [
+        "Product catalogue with search + filters",
+        "Secure Razorpay payment flow",
+        "Role-based admin dashboard",
+        "Order + inventory management",
+        "Wishlist + reviews",
+        "Responsive Radix UI components"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Twitter Clone",
+      "description": "A MERN-based microblogging platform featuring Google authentication and real-time posting.",
+      "type": "Social Media",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/Twitter-Clone",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Material UI"
+      ],
+      "keyFeatures": [
+        "Google OAuth authentication",
+        "Post creation + feed updates",
+        "Responsive modern UI",
+        "Scalable backend architecture"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Chat Website",
+      "description": "A real-time messaging platform using WebSockets for instant communication.",
+      "type": "Real-time Communication",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/Chat-Website",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "WebSockets"
+      ],
+      "keyFeatures": [
+        "Real-time messaging engine",
+        "WebSocket-based communication",
+        "Fast UI updates",
+        "Stable performance under load"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Foodie Website",
+      "description": "A clean, modern recipe platform allowing users to browse and upload recipes.",
+      "type": "Web Application",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/Foodie-Website",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "keyFeatures": [
+        "Recipe upload",
+        "Recipe browsing",
+        "Responsive modern UI",
+        "Fast rendering"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Synapsis Portfolio Website",
+      "description": "A professional portfolio website built for Synapsis Medical Technologies, showcasing projects with smooth UI animations.",
+      "type": "Portfolio Website",
+      "live": "https://synapsis-six.vercel.app/",
+      "github": "https://github.com/harshsrivastava05/Synapsis",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "ShadCN",
+        "Framer Motion"
+      ],
+      "keyFeatures": [
+        "Smooth animations",
+        "Responsive layout",
+        "High-performance UI",
+        "Brand-focused design"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "React.js",
+      "Next.js 14/15",
+      "Tailwind CSS",
+      "Radix UI",
+      "JavaScript/TypeScript"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Python asyncio",
+      "LangGraph",
+      "Redis",
+      "Docker"
+    ],
+    "databases": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Pinecone (Vector DB)"
+    ],
+    "tools": [
+      "Git/GitHub",
+      "Vercel",
+      "Render",
+      "Google Cloud",
+      "WebSockets",
+      "Docker"
+    ],
+    "specializations": [
+      "Backend Architecture",
+      "RAG Systems",
+      "Agentic AI Workflows",
+      "Real-time Communication Systems",
+      "E-commerce Architecture",
+      "Authentication Systems",
+      "System Design"
+    ]
+  },
+  "workExperience": [
+    {
+      "company": "Synapsis Medical Technologies Inc.",
+      "role": "Software Development Intern",
+      "type": "Internship",
+      "location": "Remote"
+    }
+  ],
+  "careerFocus": {
+    "targetRoles": [
+      "AI Engineer",
+      "Full-stack Developer",
+      "Backend Engineer",
+      "LLM/RAG Engineer",
+      "Software Engineer"
+    ],
+    "targetCompanies": [
+      "AI-first Startups",
+      "Product Companies",
+      "Tech-driven Organizations"
+    ],
+    "recruitmentStage": "Actively applying and interviewing"
+  },
+  "deploymentPlatforms": [
+    "Vercel",
+    "Render",
+    "Google Cloud",
+    "Netlify",
+    "Railway"
+  ],
+  "additionalInfo": {
+    "githubPresence": "Active with multiple full-stack and AI repositories",
+    "competitiveProgramming": "250+ problems solved",
+    "systemDesign": "Actively learning distributed systems and backend design"
+  }
+}

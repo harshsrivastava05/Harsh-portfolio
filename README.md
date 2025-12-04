@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harsh Srivastava - Portfolio
 
-## Getting Started
+A **Neo-Swiss Brutalist** portfolio website built with **Next.js 15**, **Tailwind CSS**, and **Three.js**. This project features a high-performance, interactive design with a focus on bold typography, raw aesthetics, and fluid animations.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Neo-Swiss Brutalist Design**: Massive typography, high contrast, and raw grid layouts.
+- **Interactive 3D Cursor**: Custom particle swarm cursor powered by `react-three-fiber` that trails and reacts to movement.
+- **Dynamic Project Pages**: Detailed case study pages for each project with image carousels and technical breakdowns.
+- **Smooth Animations**: Powered by `framer-motion` for seamless page transitions and scroll effects.
+- **Responsive**: Fully optimized for all devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **3D Graphics**: [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+- **Font**: `Space Grotesk` (Headings) & `Inter` (Body)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app`: App Router pages and layouts.
+- `src/components`: Reusable UI components (Hero, Projects, InteractiveCursor, etc.).
+- `src/data`: JSON data for projects and personal info.
+- `public/assets`: Static assets (images, fonts).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Philosophy
 
-## Deploy on Vercel
+The design follows a **"Premium Minimalist"** approach with Brutalist influences:
+- **Strict Monochrome**: Primarily Black (`#050505`) and White (`#FFFFFF`).
+- **Function over Form**: Raw borders, visible grids, and system-like typography.
+- **Micro-Interactions**: Subtle hover states and cursor physics to enhance engagement without clutter.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Harsh Srivastava. All Rights Reserved.
