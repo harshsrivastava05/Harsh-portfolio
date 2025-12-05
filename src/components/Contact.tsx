@@ -22,7 +22,7 @@ export default function Contact() {
           
           <a 
             href={`mailto:${personalInfo.email}`}
-            className="text-2xl md:text-4xl font-mono border-b border-white pb-2 hover:bg-white hover:text-black transition-all uppercase"
+            className="text-lg sm:text-2xl md:text-4xl font-mono border-b border-white pb-2 hover:bg-white hover:text-black transition-all uppercase break-all"
           >
             {personalInfo.email}
           </a>

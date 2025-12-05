@@ -63,6 +63,15 @@
         "Vector search with Pinecone",
         "Mind-map visualization",
         "Containerized microservices"
+      ],
+      "features": [
+        "Implements a multi-agent pipeline using LangGraph with nodes for topic extraction, summarization, Q&A, and mind-map generation.",
+        "Handles PDF ingestion via Google Cloud Storage and triggers async processing through Python asyncio workers.",
+        "FastAPI routes orchestrate embeddings, metadata extraction, and retrieval without blocking I/O.",
+        "Stores embeddings in Pinecone and performs similarity search for context retrieval.",
+        "Redis provides low-latency caching of document metadata and processed chunks.",
+        "Generates hierarchical mind-map JSON structures consumed by React Flow on the frontend.",
+        "Deployed as separate Dockerized services for isolated, reproducible builds."
       ]
     },
     {
@@ -87,6 +96,15 @@
         "Persistent chat history",
         "Cloud storage integration",
         "High-accuracy vector retrieval"
+      ],
+      "features": [
+        "Uploads documents through Next.js API routes and stores them in Google Cloud Storage.",
+        "Triggers backend parsing and embedding generation through FastAPI endpoints.",
+        "Stores embeddings and metadata in Pinecone for high-accuracy retrieval.",
+        "Chat history is persisted in NeonDB for long-term session continuity.",
+        "Uses Gemini 2.5 Flash for context-aware answer synthesis.",
+        "Implements secure OAuth + JWT session handling via NextAuth.",
+        "Provides type-safe frontend–backend communication through TypeScript models."
       ]
     },
     {
@@ -112,10 +130,45 @@
         "Order + inventory management",
         "Wishlist + reviews",
         "Responsive Radix UI components"
+      ],
+      "features": [
+        "Implements guest carts through localStorage and authenticated carts in MySQL via Prisma.",
+        "End-to-end order lifecycle: Razorpay order creation → payment signature verification → persistent order tracking.",
+        "Admin panel built with custom Next.js server components and ShadCN primitives.",
+        "UploadThing handles product image uploads with metadata stored in Prisma.",
+        "Catalog uses infinite scrolling and dynamic routes for efficient rendering.",
+        "Role-based access controls allow admins to manage products, orders, and users."
       ]
     },
     {
       "id": 4,
+      "name": "Synapsis Portfolio Website",
+      "description": "A professional portfolio website built for Synapsis Medical Technologies, showcasing projects with smooth UI animations.",
+      "type": "Portfolio Website",
+      "live": "https://synapsis-six.vercel.app/",
+      "github": "https://github.com/harshsrivastava05/Synapsis",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "ShadCN",
+        "Framer Motion"
+      ],
+      "keyFeatures": [
+        "Smooth animations",
+        "Responsive layout",
+        "High-performance UI",
+        "Brand-focused design"
+      ],
+      "features": [
+        "Statically rendered pages improve performance and SEO.",
+        "Framer Motion controls staggered element animations and page transitions.",
+        "UI built from reusable components — cards, sections, headers, grids.",
+        "Tailwind + ShadCN form a consistent design system across the site.",
+        "Deployed as a lightweight Next.js static build."
+      ]
+    },
+    {
+      "id": 5,
       "name": "Twitter Clone",
       "description": "A MERN-based microblogging platform featuring Google authentication and real-time posting.",
       "type": "Social Media",
@@ -133,10 +186,18 @@
         "Post creation + feed updates",
         "Responsive modern UI",
         "Scalable backend architecture"
+      ],
+      "features": [
+        "REST API handles posts, user profiles, and timeline retrieval.",
+        "Google OAuth provides secure session handling.",
+        "Uses MongoDB for storing posts, comments, and media references.",
+        "Infinite scroll is implemented using paginated queries.",
+        "UploadThing supports media uploads with URLs stored in MongoDB.",
+        "Material UI defines a modular visual component system."
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Chat Website",
       "description": "A real-time messaging platform using WebSockets for instant communication.",
       "type": "Real-time Communication",
@@ -154,10 +215,17 @@
         "WebSocket-based communication",
         "Fast UI updates",
         "Stable performance under load"
+      ],
+      "features": [
+        "Uses the low-level `ws` library to manage WebSocket connections manually.",
+        "Each connected client receives broadcasted messages with minimal overhead.",
+        "MongoDB persists messages for long-term history retrieval.",
+        "Implements online/offline presence using connection lifecycle events.",
+        "React frontend listens to WebSocket events to instantly reflect new messages."
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Foodie Website",
       "description": "A clean, modern recipe platform allowing users to browse and upload recipes.",
       "type": "Web Application",
@@ -172,26 +240,13 @@
         "Recipe browsing",
         "Responsive modern UI",
         "Fast rendering"
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Synapsis Portfolio Website",
-      "description": "A professional portfolio website built for Synapsis Medical Technologies, showcasing projects with smooth UI animations.",
-      "type": "Portfolio Website",
-      "live": "https://synapsis-six.vercel.app/",
-      "github": "https://github.com/harshsrivastava05/Synapsis",
-      "technologies": [
-        "Next.js",
-        "Tailwind CSS",
-        "ShadCN",
-        "Framer Motion"
       ],
-      "keyFeatures": [
-        "Smooth animations",
-        "Responsive layout",
-        "High-performance UI",
-        "Brand-focused design"
+      "features": [
+        "Stores recipe metadata, text, and images inside a database.",
+        "Uses UploadThing or custom API routes for media uploads.",
+        "Guest-only browsing and submission — no authentication required.",
+        "Server-rendered pages for SEO and fast load times.",
+        "Tailwind components provide reusable layout and card structures."
       ]
     }
   ],

@@ -63,6 +63,18 @@ export default function ProjectPage() {
     return () => clearInterval(interval);
   }, [project]);
 
+  const nextImage = () => {
+    if (!project) return;
+    const images = projectImages[project.id] || [];
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    if (!project) return;
+    const images = projectImages[project.id] || [];
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   if (!project) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -127,7 +139,23 @@ export default function ProjectPage() {
           </AnimatePresence>
           
           {/* Carousel Controls/Indicators */}
-          <div className="absolute bottom-4 right-4 flex gap-2">
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black text-white border border-white/20 hover:border-white transition-all z-10"
+            aria-label="Previous image"
+          >
+            ←
+          </button>
+          
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black text-white border border-white/20 hover:border-white transition-all z-10"
+            aria-label="Next image"
+          >
+            →
+          </button>
+
+          <div className="absolute bottom-4 right-4 flex gap-2 z-10">
             {images.map((_, idx) => (
               <button
                 key={idx}
@@ -149,6 +177,22 @@ export default function ProjectPage() {
             <p className="text-2xl md:text-3xl font-light leading-tight uppercase tracking-wide">
               {project.description}
             </p>
+
+            {project.features && (
+              <div className="mt-16">
+                <h3 className="text-sm text-gray-500 uppercase mb-8 tracking-widest">
+                  Technical Details
+                </h3>
+                <ul className="space-y-6">
+                  {project.features.map((feature: string, i: number) => (
+                    <li key={i} className="flex gap-4 text-lg md:text-xl font-light leading-relaxed text-gray-300">
+                      <span className="text-white/40 font-mono">{(i + 1).toString().padStart(2, '0')}</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-16 flex gap-8">
               {project.live && (
@@ -189,13 +233,13 @@ export default function ProjectPage() {
               </div>
             </div>
 
-            {project.features && (
+            {project.keyFeatures && (
               <div>
                 <h3 className="text-sm text-gray-500 uppercase mb-4 tracking-widest">
-                  Key Features
+                  Key Highlights
                 </h3>
                 <ul className="space-y-2">
-                  {project.features.map((feature: string, i: number) => (
+                  {project.keyFeatures.map((feature: string, i: number) => (
                     <li key={i} className="text-sm text-gray-400 border-b border-white/10 pb-2 uppercase tracking-wide">
                       {feature}
                     </li>
