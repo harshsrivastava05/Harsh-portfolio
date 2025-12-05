@@ -26,8 +26,13 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-2xl md:text-4xl font-light leading-tight uppercase tracking-wide">
-                {about.summary}
+              <p className="text-2xl md:text-4xl font-light leading-[1.5] uppercase tracking-wide">
+                <span className="bg-white text-black px-2 py-1 box-decoration-clone">
+                  {about.summary.split(",")[0]},
+                </span>
+                <span className="px-2">
+                  {about.summary.split(",").slice(1).join(",")}
+                </span>
               </p>
             </motion.div>
 

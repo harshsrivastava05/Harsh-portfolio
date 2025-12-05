@@ -24,15 +24,15 @@ const projectImages: Record<number, string[]> = {
     "/assets/project-images/ashmark/AdminDashboard.png",
     "/assets/project-images/ashmark/checkout_page.png"
   ],
-  7: [ // Synapsis
+  4: [ // Synapsis
     "/assets/project-images/synapsis/Homepage.png",
     "/assets/project-images/synapsis/ProjecrDisplay_page.png",
     "/assets/project-images/synapsis/AboutUs_section.png"
   ],
   // Fallbacks/Single images
-  4: ["/assets/project-images/twitter.png"],
-  5: ["/assets/project-images/chatting.png"],
-  6: ["/assets/project-images/foodie.png"],
+  5: ["/assets/project-images/twitter.png"],
+  6: ["/assets/project-images/chatting.png"],
+  7: ["/assets/project-images/foodie.png"],
 };
 
 export default function Projects() {
@@ -113,8 +113,8 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
         onMouseMove={handleMouseMove}
       >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
-          <div className="flex items-baseline gap-8 w-full md:w-auto">
-            <span className={`font-mono text-xl transition-colors ${
+          <div className="flex items-start gap-8 w-full md:w-auto">
+            <span className={`font-mono text-xl pt-1 transition-colors ${
               (hovered && !isMobile) ? "text-black" : "text-gray-500"
             }`}>
               {String(index + 1).padStart(2, '0')}
@@ -127,14 +127,14 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
           </div>
 
           <div className="flex items-center gap-4 md:gap-12 w-full md:w-auto justify-between md:justify-end">
-            <div className="flex gap-2">
+            <div className="hidden md:flex gap-2">
               {project.technologies?.slice(0, 3).map((tech: string, i: number) => (
-                <span key={i} className="text-xs font-mono border border-current px-3 py-1 uppercase tracking-wider">
+                <span key={i} className="text-xs font-mono border-[1.5px] border-current px-3 py-1 uppercase tracking-wider">
                   {tech}
                 </span>
               ))}
             </div>
-            <div className={`w-12 h-12 flex items-center justify-center border border-current rounded-full transition-all duration-500 ${
+            <div className={`w-12 h-12 flex items-center justify-center border-[1.5px] border-current rounded-full transition-all duration-500 ${
               (hovered && !isMobile) ? "bg-black text-white" : ""
             }`}>
               <span className={`text-2xl font-heading transition-transform duration-500 ${

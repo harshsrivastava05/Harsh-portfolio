@@ -25,15 +25,15 @@ const projectImages: Record<number, string[]> = {
     "/assets/project-images/ashmark/AdminDashboard.png",
     "/assets/project-images/ashmark/checkout_page.png"
   ],
-  7: [ // Synapsis
+  4: [ // Synapsis
     "/assets/project-images/synapsis/Homepage.png",
     "/assets/project-images/synapsis/ProjecrDisplay_page.png",
     "/assets/project-images/synapsis/AboutUs_section.png"
   ],
   // Fallbacks/Single images
-  4: ["/assets/project-images/twitter.png"],
-  5: ["/assets/project-images/chatting.png"],
-  6: ["/assets/project-images/foodie.png"],
+  5: ["/assets/project-images/twitter.png"],
+  6: ["/assets/project-images/chatting.png"],
+  7: ["/assets/project-images/foodie.png"],
 };
 
 export default function ProjectPage() {

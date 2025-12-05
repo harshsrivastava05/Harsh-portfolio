@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
@@ -31,6 +31,11 @@ function PlanetParticles(props: any) {
     return points;
   }, []);
 
+  const { viewport } = useThree();
+  // Adjust scale based on viewport width (mobile check)
+  // Base radius is 1.2 (diameter 2.4). If viewport width is smaller, scale down.
+  const scale = viewport.width < 3.5 ? viewport.width / 3.5 : 1;
+
   useFrame((state, delta) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10;
@@ -39,7 +44,7 @@ function PlanetParticles(props: any) {
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group rotation={[0, 0, Math.PI / 4]} scale={[scale, scale, scale]}>
       <Points ref={ref} positions={spherePoints} stride={3} frustumCulled={false} {...props}>
         <PointMaterial
           transparent

@@ -34,6 +34,7 @@ export default function Contact() {
           <a href="https://github.com/harshsrivastava05" target="_blank" className="hover:text-white transition-colors">GITHUB</a>
           <a href="https://www.linkedin.com/in/harsh-srivastava-a4ab8a273/" target="_blank" className="hover:text-white transition-colors">LINKEDIN</a>
           <a href="https://leetcode.com/u/harshsrivastava05/" target="_blank" className="hover:text-white transition-colors">LEETCODE</a>
+          <a href="https://drive.google.com/file/d/1GH64rHcgNSsq6V7E2EQ453WpuQcdfUNy/view?usp=sharing" target="_blank" className="hover:text-white transition-colors">RESUME</a>
         </div>
         <span className="mt-4 md:mt-0">© 2025 HARSH SRIVASTAVA</span>
       </div>
