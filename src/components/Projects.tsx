@@ -19,20 +19,29 @@ const projectImages: Record<number, string[]> = {
     "/assets/project-images/docanalyzer/Dashboard.png",
     "/assets/project-images/docanalyzer/AI_Q&A_PAGE.png"
   ],
-  3: [ // Ashmark
+  3: [ // ChessVerse
+    "/assets/project-images/chessverse/Homepage.png",
+    "/assets/project-images/chessverse/play_in_progress.png"
+  ],
+  4: [ // ClickPe.ai
+    "/assets/project-images/ClickPe-AIDashboard/Dashboard.png",
+    "/assets/project-images/ClickPe-AIDashboard/AI_chatbot.png",
+    "/assets/project-images/ClickPe-AIDashboard/AllProducts.png"
+  ],
+  5: [ // Ashmark
     "/assets/project-images/ashmark/homepage.png",
     "/assets/project-images/ashmark/AdminDashboard.png",
     "/assets/project-images/ashmark/checkout_page.png"
   ],
-  4: [ // Synapsis
+  6: [ // Synapsis
     "/assets/project-images/synapsis/Homepage.png",
     "/assets/project-images/synapsis/ProjecrDisplay_page.png",
     "/assets/project-images/synapsis/AboutUs_section.png"
   ],
   // Fallbacks/Single images
-  5: ["/assets/project-images/twitter.png"],
-  6: ["/assets/project-images/chatting.png"],
-  7: ["/assets/project-images/foodie.png"],
+  7: ["/assets/project-images/twitter.png"],
+  8: ["/assets/project-images/chatting.png"],
+  9: ["/assets/project-images/foodie.png"],
 };
 
 export default function Projects() {
@@ -47,7 +56,7 @@ export default function Projects() {
           </h2>
           <span className="text-xl font-mono text-gray-500 mt-4 md:mt-0 uppercase tracking-widest">(2023 — 2025)</span>
         </div>
-        
+
         <div className="flex flex-col gap-px bg-white border border-white">
           {projects.map((project, index) => (
             <ProjectItem key={project.id} project={project} index={index} />
@@ -64,7 +73,7 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLAnchorElement>(null);
-  
+
   const images = projectImages[project.id] || ["/assets/images/myself.jpeg"];
 
   useEffect(() => {
@@ -82,7 +91,7 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
     if (hovered && !isMobile && images.length > 1) {
       interval = setInterval(() => {
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
-      }, 800); 
+      }, 800);
     } else {
       setCurrentImageIndex(0);
     }
@@ -114,14 +123,12 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
       >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
           <div className="flex items-start gap-8 w-full md:w-auto">
-            <span className={`font-mono text-xl pt-1 transition-colors ${
-              (hovered && !isMobile) ? "text-black" : "text-gray-500"
-            }`}>
+            <span className={`font-mono text-xl pt-1 transition-colors ${(hovered && !isMobile) ? "text-black" : "text-gray-500"
+              }`}>
               {String(index + 1).padStart(2, '0')}
             </span>
-            <h3 className={`text-4xl md:text-6xl font-heading font-bold tracking-tighter uppercase transition-transform duration-500 ${
-              (hovered && !isMobile) ? "translate-x-4" : ""
-            }`}>
+            <h3 className={`text-4xl md:text-6xl font-heading font-bold tracking-tighter uppercase transition-transform duration-500 ${(hovered && !isMobile) ? "translate-x-4" : ""
+              }`}>
               {project.name}
             </h3>
           </div>
@@ -134,12 +141,10 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
                 </span>
               ))}
             </div>
-            <div className={`w-12 h-12 flex items-center justify-center border-[1.5px] border-current rounded-full transition-all duration-500 ${
-              (hovered && !isMobile) ? "bg-black text-white" : ""
-            }`}>
-              <span className={`text-2xl font-heading transition-transform duration-500 ${
-                (hovered && !isMobile) ? "rotate-0" : "-rotate-45"
+            <div className={`w-12 h-12 flex items-center justify-center border-[1.5px] border-current rounded-full transition-all duration-500 ${(hovered && !isMobile) ? "bg-black text-white" : ""
               }`}>
+              <span className={`text-2xl font-heading transition-transform duration-500 ${(hovered && !isMobile) ? "rotate-0" : "-rotate-45"
+                }`}>
                 →
               </span>
             </div>
@@ -151,13 +156,13 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
       <AnimatePresence>
         {hovered && !isMobile && (
           <motion.div
-            initial={{ 
-              opacity: 0, 
-              scale: 0.8, 
-              x: mousePos.x + 20, 
-              y: mousePos.y - 100 
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+              x: mousePos.x + 20,
+              y: mousePos.y - 100
             }}
-            animate={{ 
+            animate={{
               opacity: 1,
               scale: 1,
               x: mousePos.x + 20,
@@ -166,7 +171,7 @@ function ProjectItem({ project, index }: { project: any, index: number }) {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
             className="fixed z-[100] pointer-events-none w-[400px] h-[225px] bg-black border-2 border-white overflow-hidden shadow-[10px_10px_0px_0px_rgba(255,255,255,0.2)]"
-            style={{ left: 0, top: 0 }} 
+            style={{ left: 0, top: 0 }}
           >
             {/* Image Carousel */}
             <AnimatePresence mode="wait">

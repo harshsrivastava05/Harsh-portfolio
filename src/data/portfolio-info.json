@@ -109,6 +109,69 @@
     },
     {
       "id": 3,
+      "name": "ChessVerse",
+      "description": "A modern, real-time multiplayer chess application built for high performance and seamless user experience with a futuristic 'Cyber-Chess' aesthetic.",
+      "type": "Real-time Game",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/ChessVerse",
+      "technologies": [
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Node.js",
+        "WebSockets",
+        "chess.js",
+        "Framer Motion"
+      ],
+      "keyFeatures": [
+        "Real-time multiplayer gameplay",
+        "Optimistic UI updates",
+        "Server-side move validation",
+        "FIFO Matchmaking system",
+        "Modern Glassmorphism UI"
+      ],
+      "features": [
+        "Implements a Client-Server architecture with custom WebSocket handling using the `ws` library.",
+        "Features a Singleton `GameManager` for efficient matchmaking and game state management.",
+        "Validates all moves server-side using `chess.js` to prevent cheating and ensure integrity.",
+        "Uses optimistic UI updates on the frontend for a lag-free experience, with server reconciliation.",
+        "Styled with Tailwind CSS v4, featuring a dark 'Cyber-Chess' theme with neon emerald accents."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ClickPe.ai",
+      "description": "An intelligent financial dashboard that aggregates loan offers and provides personalized recommendations based on user credit profiles, featuring an AI-driven financial assistant.",
+      "type": "FinTech Platform",
+      "live": null,
+      "github": "https://github.com/harshsrivastava05/ClickPe.ai",
+      "technologies": [
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Vercel AI SDK",
+        "ShadCN UI"
+      ],
+      "keyFeatures": [
+        "Personalized Loan Matching",
+        "AI Financial Assistant",
+        "Real-time Credit Analysis",
+        "Secure Authentication",
+        "Interactive Dashboard"
+      ],
+      "features": [
+        "Aggregates and filters loan products based on dynamic user criteria like credit score, income, and tenure.",
+        "Integrates Vercel AI SDK to provide a context-aware chat assistant for financial guidance.",
+        "Uses Next.js App Router and Server Actions for secure and efficient data handling.",
+        "Implements a robust PostgreSQL database schema managed via Prisma ORM.",
+        "Features a responsive, accessible UI built with Tailwind CSS v4 and Radix UI components.",
+        "Secure authentication flow using HTTP-only cookies and JWT."
+      ]
+    },
+    {
+      "id": 5,
       "name": "Ashmark – Premium T-Shirt E-Commerce Platform",
       "description": "A production-grade eCommerce platform with complete product flows, admin dashboards, and secure payments.",
       "type": "E-commerce",
@@ -141,7 +204,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Synapsis Portfolio Website",
       "description": "A professional portfolio website built for Synapsis Medical Technologies, showcasing projects with smooth UI animations.",
       "type": "Portfolio Website",
@@ -168,7 +231,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "Twitter Clone",
       "description": "A MERN-based microblogging platform featuring Google authentication and real-time posting.",
       "type": "Social Media",
@@ -197,7 +260,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "Chat Website",
       "description": "A real-time messaging platform using WebSockets for instant communication.",
       "type": "Real-time Communication",
@@ -225,7 +288,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 9,
       "name": "Foodie Website",
       "description": "A clean, modern recipe platform allowing users to browse and upload recipes.",
       "type": "Web Application",
@@ -253,7 +316,7 @@
   "skills": {
     "frontend": [
       "React.js",
-      "Next.js 14/15",
+      "Next.js 14/15/16",
       "Tailwind CSS",
       "Radix UI",
       "JavaScript/TypeScript"

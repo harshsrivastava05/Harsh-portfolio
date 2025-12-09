@@ -9,16 +9,16 @@ export default function About() {
   return (
     <section className="py-32 px-4 md:px-8 bg-black text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-x-24 gap-y-16">
           {/* Header */}
-          <div className="md:col-span-4">
-            <h2 className="text-[8vw] leading-[0.8] font-heading font-bold tracking-tighter uppercase sticky top-32 mix-blend-difference">
+          <div className="md:col-span-5">
+            <h2 className="text-[8vw] leading-[0.8] font-heading font-bold tracking-tighter uppercase sticky top-32 mix-blend-difference z-20">
               About
             </h2>
           </div>
 
           {/* Content */}
-          <div className="md:col-span-8 space-y-24">
+          <div className="md:col-span-7 space-y-24">
             {/* Summary */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -65,6 +65,42 @@ export default function About() {
                 <h3 className="text-xs font-mono mb-8 tracking-widest text-gray-500 uppercase">Backend</h3>
                 <div className="flex flex-wrap gap-3">
                   {skills.backend.map((skill, i) => (
+                    <span key={i} className="px-4 py-2 border border-white/20 text-sm font-mono uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-default">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Databases */}
+              <div>
+                <h3 className="text-xs font-mono mb-8 tracking-widest text-gray-500 uppercase">Databases</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.databases.map((skill, i) => (
+                    <span key={i} className="px-4 py-2 border border-white/20 text-sm font-mono uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-default">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tools */}
+              <div>
+                <h3 className="text-xs font-mono mb-8 tracking-widest text-gray-500 uppercase">Tools & DevOps</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.tools.map((skill, i) => (
+                    <span key={i} className="px-4 py-2 border border-white/20 text-sm font-mono uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-default">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Specializations */}
+              <div className="md:col-span-2">
+                <h3 className="text-xs font-mono mb-8 tracking-widest text-gray-500 uppercase">Specializations</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.specializations.map((skill, i) => (
                     <span key={i} className="px-4 py-2 border border-white/20 text-sm font-mono uppercase tracking-wider hover:bg-white hover:text-black transition-all cursor-default">
                       {skill}
                     </span>

@@ -20,20 +20,29 @@ const projectImages: Record<number, string[]> = {
     "/assets/project-images/docanalyzer/Dashboard.png",
     "/assets/project-images/docanalyzer/AI_Q&A_PAGE.png"
   ],
-  3: [ // Ashmark
+  3: [ // ChessVerse
+    "/assets/project-images/chessverse/Homepage.png",
+    "/assets/project-images/chessverse/play_in_progress.png"
+  ],
+  4: [ // ClickPe.ai
+    "/assets/project-images/ClickPe-AIDashboard/Dashboard.png",
+    "/assets/project-images/ClickPe-AIDashboard/AI_chatbot.png",
+    "/assets/project-images/ClickPe-AIDashboard/AllProducts.png"
+  ],
+  5: [ // Ashmark
     "/assets/project-images/ashmark/homepage.png",
     "/assets/project-images/ashmark/AdminDashboard.png",
     "/assets/project-images/ashmark/checkout_page.png"
   ],
-  4: [ // Synapsis
+  6: [ // Synapsis
     "/assets/project-images/synapsis/Homepage.png",
     "/assets/project-images/synapsis/ProjecrDisplay_page.png",
     "/assets/project-images/synapsis/AboutUs_section.png"
   ],
   // Fallbacks/Single images
-  5: ["/assets/project-images/twitter.png"],
-  6: ["/assets/project-images/chatting.png"],
-  7: ["/assets/project-images/foodie.png"],
+  7: ["/assets/project-images/twitter.png"],
+  8: ["/assets/project-images/chatting.png"],
+  9: ["/assets/project-images/foodie.png"],
 };
 
 export default function ProjectPage() {
@@ -137,7 +146,7 @@ export default function ProjectPage() {
               />
             </motion.div>
           </AnimatePresence>
-          
+
           {/* Carousel Controls/Indicators */}
           <button
             onClick={prevImage}
@@ -146,7 +155,7 @@ export default function ProjectPage() {
           >
             ←
           </button>
-          
+
           <button
             onClick={nextImage}
             className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black text-white border border-white/20 hover:border-white transition-all z-10"
@@ -160,9 +169,8 @@ export default function ProjectPage() {
               <button
                 key={idx}
                 onClick={() => setCurrentImageIndex(idx)}
-                className={`w-2 h-2 rounded-full ${
-                  idx === currentImageIndex ? "bg-white" : "bg-white/20"
-                }`}
+                className={`w-2 h-2 rounded-full ${idx === currentImageIndex ? "bg-white" : "bg-white/20"
+                  }`}
               />
             ))}
           </div>
