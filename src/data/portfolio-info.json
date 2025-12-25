@@ -265,7 +265,7 @@
       "description": "A real-time messaging platform using WebSockets for instant communication.",
       "type": "Real-time Communication",
       "live": null,
-      "github": "https://github.com/harshsrivastava05/Chat-Website",
+      "github": "https://github.com/harshsrivastava05/Chatting-website",
       "technologies": [
         "React.js",
         "Node.js",
