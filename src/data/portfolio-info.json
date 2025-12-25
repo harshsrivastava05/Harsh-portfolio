@@ -143,7 +143,7 @@
       "name": "ClickPe.ai",
       "description": "An intelligent financial dashboard that aggregates loan offers and provides personalized recommendations based on user credit profiles, featuring an AI-driven financial assistant.",
       "type": "FinTech Platform",
-      "live": null,
+      "live": "https://click-pe-ai.vercel.app/",
       "github": "https://github.com/harshsrivastava05/ClickPe.ai",
       "technologies": [
         "Next.js 16",
@@ -292,7 +292,7 @@
       "name": "Foodie Website",
       "description": "A clean, modern recipe platform allowing users to browse and upload recipes.",
       "type": "Web Application",
-      "live": null,
+      "live": "https://foodie-app-ten-neon.vercel.app/",
       "github": "https://github.com/harshsrivastava05/Foodie-Website",
       "technologies": [
         "Next.js",
